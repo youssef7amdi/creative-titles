@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 20px;
+}
+body > div > span {
+  font-size: 30px;
+  font-weight: bold;
+}
+h3 > span {
+  margin-top: 10px;
+  display: block;
+  width: 200px;
+  height: 2px;
+  background-color: #ccc;
+  position: relative;
+}
+h3 > span::before {
+  content: "";
+  width: 55%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: black;
+}
+.circle h3 > span::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  background-color: black;
+}
+.box h3 > span::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  background-color: black;
+}
+.triangle-up h3 > span::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10px solid black;
+  border-color: transparent transparent black transparent;
+  position: absolute;
+  left: 0px;
+  top: -19px;
+}
+.triangle-down h3 > span::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10px solid black;
+  border-color: black transparent transparent transparent;
+  position: absolute;
+  left: 0px;
+  top: 2px;
+}
+.blue {
+  color: #2c6ccf;
+}
+.blue span::before,
+.box .blue span::after,
+.circle .blue span::after {
+  background-color: #2c6ccf;
+}
+.triangle-up .blue span::after {
+  border-color: transparent transparent #2c6ccf;
+}
+.triangle-down .blue span::after {
+  border-color: #2c6ccf transparent transparent;
+}
+.red {
+  color: #cf2c2c;
+}
+.red span::before,
+.box .red span::after,
+.circle .red span::after {
+  background-color: #cf2c2c;
+}
+.triangle-up .red span::after {
+  border-color: transparent transparent #cf2c2c;
+}
+.triangle-down .red span::after {
+  border-color: #cf2c2c transparent transparent;
+}
+.green {
+  color: #309e0e;
+}
+.green span::before,
+.box .green span::after,
+.circle .green span::after {
+  background-color: #309e0e;
+}
+.triangle-up .green span::after {
+  border-color: transparent transparent #309e0e;
+}
+.triangle-down .green span::after {
+  border-color: #309e0e transparent transparent;
+}
+.orange {
+  color: #cd661a;
+}
+.orange span::before,
+.box .orange span::after,
+.circle .orange span::after {
+  background-color: #cd661a;
+}
+.triangle-up .orange span::after {
+  border-color: transparent transparent #cd661a;
+}
+.triangle-down .orange span::after {
+  border-color: #cd661a transparent transparent;
+}
